@@ -54,14 +54,14 @@
 			<artifactId>BarcodeScanner</artifactId>
 			<scope>system</scope>
 			<version>1.0</version>
-			<systemPath>C:/Users/USER/eclipse-workspace1/testImage/lib/OnBarcode.BarcodeReader.jar</systemPath>
+			<systemPath>C:/Users/USER/eclipse-workspace1/git_projects/springBootTest/lib/OnBarcode.BarcodeReader.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>com.sun.media.jai</groupId>
 			<artifactId>sun-jai_codec</artifactId>
 			<scope>system</scope>
 			<version>1.0</version>
-			<systemPath>C:/Users/USER/eclipse-workspace1/testImage/lib/sun-jai_codec.jar</systemPath>
+			<systemPath>C:/Users/USER/eclipse-workspace1/git_projects/springBootTest/lib/sun-jai_codec.jar</systemPath>
 		</dependency>
 	</dependencies>
 

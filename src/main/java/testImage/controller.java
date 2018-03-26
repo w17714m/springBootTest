@@ -8,6 +8,7 @@ import javax.swing.JOptionPane;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,10 +22,11 @@ import OnBarcode.Barcode.BarcodeScanner.BarcodeType;
 @RequestMapping("/api/")
 public class controller {
 
+	@CrossOrigin("http://localhost:8080/")
 	@PostMapping("/test/")
 	public ResponseEntity<String> getDataCC(){
 		
-		String []  barcodes = BarcodeScanner.Scan("", BarcodeType.PDF417);
+		String []  barcodes = BarcodeScanner.Scan("agregar url local", BarcodeType.PDF417);
 		
 		if(barcodes.length>0) {
 			System.out.println("longitud" + barcodes[0].toString());
@@ -34,6 +36,7 @@ public class controller {
 		
 		return new ResponseEntity<String>(barcodes[0].toString(),HttpStatus.OK);
 	}
+	@CrossOrigin("http://localhost:8080/")
 	@PostMapping("/archivo/")
 	public ResponseEntity<String> getDataFile(@RequestParam("archivo") MultipartFile file){
 		try {
